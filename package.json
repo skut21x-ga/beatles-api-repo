@@ -1,0 +1,25 @@
+{
+  "name": "beatles-api-repo",
+  "version": "1.0.0",
+  "description": "backend api for Beatles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skut21x-ga/beatles-api-repo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skut21x-ga/beatles-api-repo/issues"
+  },
+  "homepage": "https://github.com/skut21x-ga/beatles-api-repo#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.9",
+    "node": "^13.13.0"
+  }
+}
