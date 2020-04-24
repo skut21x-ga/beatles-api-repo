@@ -37,8 +37,14 @@ app.post("/", (req, res) => {
 });
 
 app.put("/:id", function (req, res) {
-  List.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }).then(
+  console.log(req.params)
+  console.log(req.body)
+  List.findOneAndUpdate({ _id: req.params.id }, 
+    {
+      $set:{Song:req.body.Song}
+    }).then(
     (list) => {
+      console.log(list)
       res.json(list);
     }
   );
