@@ -28,15 +28,15 @@ router.post("/signup", (req, res) => {
               token: token,
             });
           } else {
-            res.sendStatus(401);
+            res.sendStatus(404);
           }
         });
       } else {
-        res.sendStatus(401);
+        res.sendStatus(402);
       }
     });
   } else {
-    res.sendStatus(401);
+    res.sendStatus(403);
   }
 });
 
@@ -53,13 +53,13 @@ router.post("/login", (req, res) => {
             token: token,
           });
         } else {
-          res.sendStatus(401);
+          res.sendStatus(404);
         }
       } else {
-        res.sendStatus(401);
+        res.sendStatus(402);
       }
     });
   } else {
-    res.sendStatus(401);
+    res.sendStatus(403);
   }
 });

@@ -5,7 +5,8 @@ app.use(bodyParser.json());
 
 const passport = require("./config/passport")();
 const userController = require("./controllers/users.js");
-
+var cors = require("cors");
+app.use(cors());
 app.use("/users", userController);
 
 app.use(passport.initialize());
@@ -37,17 +38,17 @@ app.post("/", (req, res) => {
 });
 
 app.put("/:id", function (req, res) {
-  console.log(req.params)
-  console.log(req.body)
-  List.findOneAndUpdate({ _id: req.params.id }, 
+  console.log(req.params);
+  console.log(req.body);
+  List.findOneAndUpdate(
+    { _id: req.params.id },
     {
-      $set:{Song:req.body.Song}
-    }).then(
-    (list) => {
-      console.log(list)
-      res.json(list);
+      $set: { Song: req.body.Song },
     }
-  );
+  ).then((list) => {
+    console.log(list);
+    res.json(list);
+  });
 });
 
 app.delete("/:id", function (req, res) {
