@@ -33,7 +33,7 @@ API URL : https://beatles-api.herokuapp.com/
 
 
 #### API Screenshot
-![Screenshot](https://github.com/skut21x-ga/beatles-mern-project/blob/master/beatles-mern/src/img/apiscreenshot.png?raw=true)
+![Screenshot](https://github.com/skut21x-ga/beatles-mern-project/blob/master/src/img/apiscreenshot.png?raw=true)
 
 ##### Swagger Documentation Link:
 ##### https://github.com/skut21x-ga/beatles-mern-project/blob/master/beatles-mern/Swagger%20Documentation.pdf
