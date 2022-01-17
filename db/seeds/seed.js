@@ -17,7 +17,8 @@ const seed = async (data) => {
     db
       .query(
         `CREATE TABLE songs (
-            song VARCHAR (250) PRIMARY KEY,
+            song_id SERIAL PRIMARY KEY,
+            song VARCHAR (250),
             lyrics VARCHAR (15000),
             writer VARCHAR (250)
             );`,
