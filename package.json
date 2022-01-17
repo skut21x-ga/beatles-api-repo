@@ -4,8 +4,12 @@
   "description": "backend api for Beatles",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup-dbs": "psql -f ./db/setup/sql",
+    "seed": "node .db/seeds/run-seed.js",
+    "start": "node listen.js",
+    "test": "NODE_ENV=test nodemon listen.js",
+    
+    "dev": "nodemon listen.js",
     "postinstall": "npm rebuild grpc --target=10.15.0 --target_arch=x64 --target_platform=linux --target_libc=glibc"
   },
   "repository": {
@@ -21,13 +25,17 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "dotenv": "^14.1.0",
+    "express": "^4.17.2",
     "heroku": "^7.39.3",
     "jwt-simple": "^0.5.6",
     "mongoose": "^5.9.10",
     "node": "^13.13.0",
+    "nodemon": "^2.0.15",
     "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "pg": "^8.7.1",
+    "pg-format": "^1.0.4"
   },
-  "devDependencies": {}
+  "keywords": []
 }
